@@ -153,15 +153,6 @@
             break;
         }
 
-        switch($currentMinute)
-        {
-            case !11:
-            case !12:
-            case !13:
-            case !14:
-                $wordMinute .= "а";
-            break;
-        }
         if($currentMinute != 11 && $currentMinute != 12 && $currentMinute != 13 && $currentMinute != 14)
         {
             $tempArray = str_split($currentMinute);
