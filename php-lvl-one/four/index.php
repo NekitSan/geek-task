@@ -1,4 +1,5 @@
 <?php
+    $title = "Домашняя работа №4.";
     const DIRECTORY = "assets/images/";
 
     function uploadImage()
@@ -49,7 +50,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Galary</title>
+    <title><?php echo $title; ?></title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
