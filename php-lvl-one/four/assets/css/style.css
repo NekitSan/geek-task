@@ -1,0 +1,56 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+* > img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+input[type="submit"] {
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 260px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0 20px;
+}
+.form__choice_text {
+    display: block;
+    margin-bottom: 7px;
+}
+.form--button {
+    display: block;
+    margin-left: auto;
+    margin-top: 7px;
+    padding: 5px 7px;
+    background-color: #4f4f4f;
+    color: #fff;
+}
+
+.galary {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.image {
+    display: block;
+    width: 310px;
+    border-radius: 10px;
+}
