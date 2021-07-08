@@ -13,7 +13,7 @@ else
 {
     if(a == b)
     {
-        errorCons("Диопазон должен состоять из: от n числа до m числа");
+        errorCons("Диапазон должен состоять из: от n числа до m числа");
     }
     if(a > b)
     {
@@ -45,8 +45,8 @@ else
         
         if(tmpArr.length != 0)
         {
-            console.log(colors.cyan( "Диапозон чисел - от", firstNumb, "до", b ));
-            console.log(colors.magenta( "Все простые числа в диапозоне -", tmpArr ));
+            console.log(colors.cyan( "Диапазон чисел - от", firstNumb, "до", b ));
+            console.log(colors.magenta( "Все простые числа в диапазоне -", tmpArr ));
 
             for(let i = 0; i < tmpArr.length; i++)
             {
@@ -59,7 +59,7 @@ else
             }
         }
         if(tmpArr.length == 0)
-            errorCons("В диапозоне, нет простых чисел");
+            errorCons("В диапазоне, нет простых чисел");
     }
 }
 
