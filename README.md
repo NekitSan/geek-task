@@ -8,4 +8,5 @@
 - ~~[Шестое задание]()~~
 > Node JS
 - [Первое задание](https://github.com/NekitSan/geek-task/blob/main/NodeJS/homework1/index.js)
-- ~~[Второе задание]()~~
+- [Второе задание](https://github.com/NekitSan/geek-task/blob/main/NodeJS/homework2/index.js)
+- ~~[Третье задание]()~~
