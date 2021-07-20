@@ -1,0 +1,139 @@
+header,
+footer {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: solid 1px #4f4f4f;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: inherit;
+}
+
+.menu__link:hover {
+    border-bottom: solid 1px #4f4f4f;
+}
+
+.form {
+    display: grid;
+    grid-template: 1fr;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+
+footer {
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    background-color: #4f4f4f;
+    color: #fff;
+}
+
+
+.catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    max-width: 360px;
+    text-align: center;
+}
+
+.product>div {
+    max-width: 360px;
+    text-align: center;
+}
+
+.product--button,
+.tovar--button {
+    display: block;
+    width: 150px;
+    height: 32px;
+    padding: 7px 12px;
+    background-color: #4f4f4f;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.product--button {
+    margin: 0 auto;
+}
+
+h1.tovar__title {
+    padding-bottom: 13px;
+}
+
+h2.tovar__title {
+    padding: 20px;
+}
+
+.tovar__description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.tovar__image {
+    width: 360px;
+}
+
+.tovar__info>div {
+    padding-bottom: 7px;
+}
+
+.tovar__branch,
+.tovar__price,
+.tovar__views {
+    font-size: 18px;
+}
+
+.tovar__info span {
+    font-size: 16px;
+}
+
+.tovar--button {
+    margin-top: 8px;
+}
+
+.tovars__popular {
+    margin-top: 10px;
+    border-top: solid 1px #4f4f4f;
+    border-bottom: solid 1px #4f4f4f;
+}
+
+.tovars__popular__title {
+    padding: 5px 0;
+}
+
+.popular__list {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.popular__list_item {
+    width: 220px;
+}
