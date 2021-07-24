@@ -9,8 +9,10 @@
     }
 ?>
 
-<?php joinContent('header', 'catalog'); ?>
+<?php joinContent('header', 'catalog'); 
+if($_SESSION['id'] != "") {?>
 <a href="#">Вы вошли как <?php echo $result_row['login'];?></a>
+<?php }?>
 <div class="wrapper">
     <?php joinContent('catalog', null); ?>
 </div>

@@ -1,14 +1,10 @@
 <?php
 session_start();
 require_once("components/index.php");
-$userId = $_SESSION['id'] ?? null;
 $userRole = $_SESSION['role'] ?? null;
-
-
-if ($userId) {
-    echo echoScript("Неизветная ошибка.");
-    exit("<meta http-equiv='refresh' content='0; url= ../catalog.php'>");
-    exit(0);
+if($userRole != "admin")
+{
+        exit("<meta http-equiv='refresh' content='0; url= ../catalog.php'>");
 }
 
 switch ($_GET['page']) {

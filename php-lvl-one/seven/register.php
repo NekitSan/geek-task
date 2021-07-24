@@ -1,9 +1,15 @@
 <?php
+    session_start();
+    require_once('components/index.php');
+    $userRole = $_SESSION['role'] ?? null;
+    if($userRole != null)
+    {
+            exit("<meta http-equiv='refresh' content='0; url= catalog.php'>");
+    }
     const SIZE_FIELD = 15;
     
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        require_once('components/index.php');
         $login = processingLines($_POST['login']);
         $pass = $_POST['password'];
 
@@ -35,19 +41,10 @@
 
 ?>
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-</head>
-<body>
+<?php joinContent('header', 'reg'); ?>
     <form action="register.php" method="POST">
         <input type="text" size="15" maxlength="15" name="login">
         <input type="password" name="password">
         <input type="submit" name="btn" value="Зарегистрироваться">
     </form>
-</body>
-</html>
+<?php joinContent('footer', null); ?>

@@ -16,6 +16,12 @@
                         $nameProduct = ($_GET['nametovar']!="") ? processingLines( $_GET['nametovar'] ) : "не задан";
                         $title = "Товар - " . $nameProduct;
                     break;
+                    case 'log':
+                        $title = "Авторизацмя";
+                    break;
+                    case 'reg':
+                        $title = "Регистрация";
+                    break;
                     default:
                         $title = "Домашняя работа №6";
                     break;

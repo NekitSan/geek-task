@@ -10,8 +10,10 @@
     }
 ?>
 
-<?php joinContent('header', 'tovar'); ?>
+<?php joinContent('header', 'tovar');
+if($_SESSION['id'] != "") {?>
 <a href="#">Вы вошли как <?php echo $result_row['login'];?></a>
+<?php }?>
 <div class="wrapper">
     <?php joinContent('product', null); ?>
 </div>

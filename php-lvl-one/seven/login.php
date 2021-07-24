@@ -1,10 +1,21 @@
 <?php
     session_start();
+    require_once('components/index.php');
+
+    $userRole = $_SESSION['role'] ?? null;
+    if($userRole != null && $_GET['option'] == "")
+    {
+        exit("<meta http-equiv='refresh' content='0; url= catalog.php'>");
+    }
+    if($_GET['option'] == "exit")
+    {
+        session_destroy();
+        exit("<meta http-equiv='refresh' content='0; url= login.php'>");
+    }
+
     const SIZE_FIELD = 15;
-    
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
-        require_once('components/index.php');
         $login = processingLines($_POST['login']);
         $pass = $_POST['password'];
 
@@ -29,23 +40,16 @@
             exit("<meta http-equiv='refresh' content='0; url= login.php'>");
         }
 
-        $_SESSION['id']=$result_row['id'];
-        $_SESSION['login']=$result_row['login']; 
-        $_SESSION['role']=$result_row['role'];
-        echo echoScript("Вход успешно выполнен! Вы вошли как {$_SESSION['role']}");
+        $_SESSION['id'] = $result_row['id'];
+        $_SESSION['login'] = $result_row['login']; 
+        $_SESSION['role'] = $result_row['role'];
+        echo echoScript("Вход успешно выполнен! Вы вошли как {$_SESSION['login']}");
         exit("<meta http-equiv='refresh' content='0; url= catalog.php'>");
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Войти</title>
-</head>
-<body>
+
+<?php joinContent('header', 'log'); ?>
     <h1>Войти</h1>
     <form action="login.php" method="POST">
         <p>
@@ -60,5 +64,4 @@
         <br>
         <a href="register.php">Зарегистрироваться</a> 
     </form>
-</body>
-</html>
+<?php joinContent('footer', null); ?>

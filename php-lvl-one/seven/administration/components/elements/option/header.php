@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -21,6 +20,9 @@
                 </li>
                 <li class="menu__item">
                     <a href="../catalog.php" class="menu__link">>>Каталог товаров<< </a>
+                </li>
+                <li class="menu__item">
+                    <a href="../login.php?option=exit" class="menu__link">Выход</a>
                 </li>
             </ul>
         </nav>
