@@ -4,16 +4,12 @@ require_once("components/index.php");
 $userId = $_SESSION['id'] ?? null;
 $userRole = $_SESSION['role'] ?? null;
 
-echo $userId;
-echo "<br>";
-echo $userRole;
 
-
-// if ($userId) {
-//     echo echoScript("Неизветная ошибка.");
-//     exit("<meta http-equiv='refresh' content='0; url= ../catalog.php'>");
-//     exit(0);
-// }
+if ($userId) {
+    echo echoScript("Неизветная ошибка.");
+    exit("<meta http-equiv='refresh' content='0; url= ../catalog.php'>");
+    exit(0);
+}
 
 switch ($_GET['page']) {
     case "admin-panel--add":
