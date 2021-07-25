@@ -182,12 +182,13 @@ td {
     gap: 15px;
     height: 100%;
 }
-.exta--menu__item {
-}
 .exta--menu__link {
     border-bottom: solid 1px transparent;
     cursor: pointer;
 }
 .exta--menu__link:hover {
     border-bottom: solid 1px #4f4f4f;
+}
+.image {
+    width: 120px;
 }

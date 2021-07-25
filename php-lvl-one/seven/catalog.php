@@ -1,6 +1,8 @@
 <?php
     session_start();
+    $truePass = true;
     require_once('components/index.php');
+    
     if (!empty($_SESSION['login']) or !empty($_SESSION['id']))
     {
         $result = "SELECT `id`, `login` FROM `user` WHERE `login`='{$_SESSION['login']}'";

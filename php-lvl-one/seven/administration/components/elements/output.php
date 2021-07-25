@@ -15,9 +15,8 @@ echo "<table>
         <td>Бренд - товара</td>
         <td>Цена - товара</td>
         <td>Просмотры - товара</td>
+        <td>Количество - товара</td>
         <td>Картинка - товара</td>
-        <td>image_type</td>
-        <td>image_url</td>
         <td>Изменить</td>
         <td>Удалить</td>
         <td>Просмотр</td>
@@ -31,9 +30,8 @@ while ($catalog_row = mysqli_fetch_array($catalog_req)) {
         
         <td>" . number_format($catalog_row['price'], 2, '.', ' ') . "</td>
         <td>{$catalog_row['views']}</td>
-        " . abbreiatTxtAddTeg($catalog_row['image_name']) . "
-        " . abbreiatTxtAddTeg($catalog_row['type']) . "
-        " . abbreiatTxtAddTeg($catalog_row['url']) . "
+        <td>{$catalog_row['qutity']}</td>
+        <td><img class='image' src='../" . $catalog_row['url'] . $catalog_row['image_name'] . "." . $catalog_row['type'] . "'></td>
         <td class='td__link--edit'>
             <a href='admin-panel.php?page=admin-panel--edit&id_product={$catalog_row['id']}'>Изменить</a>
         </td>

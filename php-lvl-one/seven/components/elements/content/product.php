@@ -28,9 +28,10 @@ if ($id_product != null && (int)$id_product != 0) {
         </div>
         <div class="tovar__info">
             <div class="tovar__branch">Марка\Бренд: <span><?php echo $product_row['branch_name'] ?></span></div>
+            <div class="tovar__branch">Количество: <span><?php echo $product_row['qutity'] ?></span></div>
             <div class="tovar__price">Цена товара: <span><?php echo $product_row['price'] ?></span> рублей</div>
             <div class="tovar__views">Уже просмотрели наш товар: <span><?php echo $view ?></span> человек</div>
-            <a href="#" onclick="alert('В данный момент, покупка запрещена!');" class="tovar--button">Заказать</a>
+            <a id="<?php echo $product_row['id'];?>" href="product.php?id=<?php echo $product_row['id']; ?>&nametovar=<?php echo $product_row['name']; ?>" class="tovar--button">Добавить в корзину</a>
         </div>
     </article>
 </div>

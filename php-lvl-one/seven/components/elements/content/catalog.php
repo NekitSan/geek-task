@@ -19,6 +19,7 @@ $catalog_req = requestInDataBase($catalog);
         </div>
         <h2 class="product__title"><span><?php echo $catalog_row['name']?></span></h2>
         <div class="product__brach">Марка\Бренд: <span><?php echo $catalog_row['branch_name']?></span></div>
+        <div class="product__brach">Количество: <span><?php echo $catalog_row['qutity']?></span></div>
         <div class="product__price">Цена товара: <span><?php echo $catalog_row['price']?></span> рублей</div>
         <a href="product.php?id=<?php echo $catalog_row['id']?>&nametovar=<?php echo $catalog_row['name']?>" class="product--button">Купить</a>
     </div>

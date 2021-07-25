@@ -1,12 +1,9 @@
 <?php
     session_start();
+    $truePass = true;
     require_once('components/index.php');
+    trueLogin($_SESSION['role']);
 
-    $userRole = $_SESSION['role'] ?? null;
-    if($userRole != null && $_GET['option'] == "")
-    {
-        exit("<meta http-equiv='refresh' content='0; url= catalog.php'>");
-    }
     if($_GET['option'] == "exit")
     {
         session_destroy();

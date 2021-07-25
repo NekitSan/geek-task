@@ -1,13 +1,10 @@
 <?php
     session_start();
+    $truePass = true;
     require_once('components/index.php');
-    $userRole = $_SESSION['role'] ?? null;
-    if($userRole != null)
-    {
-            exit("<meta http-equiv='refresh' content='0; url= catalog.php'>");
-    }
+    trueLogin($_SESSION['role']);
+
     const SIZE_FIELD = 15;
-    
     if($_SERVER['REQUEST_METHOD'] == "POST")
     {
         $login = processingLines($_POST['login']);

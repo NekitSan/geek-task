@@ -62,4 +62,24 @@
     {
         return "<script>alert('$text');</script>";
     }
+    function trueLogin($input)
+    {
+        $input = $input ?? null;
+        if($input != null && $_GET['option'] == "")
+            exit("<meta http-equiv='refresh' content='0; url= catalog.php'>");
+    }
+
+
+    function addTocartAction()
+    {
+        $itemId = isset($_GET['id']) ? $_GET['id'] : null;
+        if(!$itemId)
+            return false;
+
+        if( isset($_SESSION['cart']) && array_search($itemId, $_SESSION['cart']) === false )
+        {
+            $_SESSION['cart'][] = $itemId;
+            $_SESSION['count'] = count($_SESSION['cart']);
+        }
+    }
 ?>

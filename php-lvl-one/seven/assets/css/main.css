@@ -67,7 +67,7 @@ footer {
 .product--button,
 .tovar--button {
     display: block;
-    width: 150px;
+    min-width: 150px;
     height: 32px;
     padding: 7px 12px;
     background-color: #4f4f4f;
@@ -135,5 +135,18 @@ h2.tovar__title {
 }
 
 .popular__list_item {
+    width: 220px;
+}
+
+.order {
+    display: grid;
+    justify-content: center;
+    gap: 40px;
+}
+
+.order__item {
+
+}
+.order__image {
     width: 220px;
 }

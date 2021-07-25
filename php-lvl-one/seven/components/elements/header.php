@@ -14,6 +14,15 @@
                 <li class="menu__item">
                     <a href="catalog.php" class="menu__link">Каталог товаров</a>
                 </li>
+                <li class="menu__item">
+                    <a href="basket.php" class="menu__link">Корзина <span class='cart--count'>
+                        <?php if($_SESSION['count'])
+                            echo($_SESSION['count']);
+                        else
+                            echo 0;?>
+                    </span>
+                    </a>
+                </li>
                 <?php if($_SESSION['role'] == "admin") {?>
                 <li class="menu__item">
                     <a href="administration/admin-panel.php" class="menu__link">Админ папнель</a>
